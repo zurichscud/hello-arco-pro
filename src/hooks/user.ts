@@ -14,7 +14,7 @@ export default function useUser() {
       name: logoutTo && typeof logoutTo === 'string' ? logoutTo : 'login',
       query: {
         ...router.currentRoute.value.query,
-        redirect: currentRoute.name as string,
+        redirect: currentRoute.name as string, // 在哪里登出就在哪里登录
       },
     });
   };
