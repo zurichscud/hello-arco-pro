@@ -189,7 +189,12 @@
         :pagination="pagination"
         :columns="(cloneColumns as TableColumnData[])"
         :data="renderData"
-        :bordered="false"
+        :bordered="{
+          wrapper: true,
+          cell: true,
+          headerCell: true,
+          bodyCell: true,
+        }"
         :size="size"
         @page-change="onPageChange"
       >
